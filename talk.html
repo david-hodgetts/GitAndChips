@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"> 
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="generator" content="pandoc" />
+  <link rel="stylesheet" type="text/css" media="screen, projection, print" 
+    href="http://www.w3.org/Talks/Tools/Slidy/slidy.css" /> 
+  <script src="http://www.w3.org/Talks/Tools/Slidy/slidy.js.gz"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide">
+
+<h1>Git &amp; Chips</h1>
+<h3>git initiation</h3>
+<h3>30.05.12</h3>
+<h3>Andreas Kundig + David Hodgetts</h3>
+<h3>made possible by Pro Git book</h3>
+<h3>creative commons</h3>
+</div>
+
+<div class="slide">
+
+<h1>what is git</h1>
+<ul class="incremental">
+<li><p>distributed version control</p></li>
+<li><div class="figure">
+<img src="images/distributed.png" /><p class="caption"></p>
+</div></li>
+</ul>
+</div>
+
+<div class="slide">
+
+<h1>some defining features</h1>
+<ul class="incremental">
+<li><p>stores snaphots</p></li>
+<li><div class="figure">
+<img src="images/snapshots.png" /><p class="caption"></p>
+</div></li>
+<li><p>not diffs</p></li>
+<li><div class="figure">
+<img src="images/snapshotsDiff.png" /><p class="caption"></p>
+</div></li>
+<li><p>local operations possible</p></li>
+<li><p>git integrity (sha1)</p></li>
+<li><p>you only ever really add data</p></li>
+</ul>
+</div>
+
+<div class="slide">
+
+<h1>local operations</h1>
+<ul class="incremental">
+<li><img src="images/localOperations.png" /></li>
+</ul>
+</div>
+
+<div class="slide">
+
+<h1>installation</h1>
+<ul class="incremental">
+<li><p>linux -&gt; apt-get install git-core</p></li>
+<li><p>mac -&gt; http://code.google.com/p/git-osx-installer</p></li>
+<li><p>mac -&gt; homebrew -&gt; http://mxcl.github.com/homebrew/</p></li>
+<li><p>windows -&gt; http://code.google.com/p/msysgit</p></li>
+<li><p>windows -&gt; http://cygwin.com</p></li>
+</ul>
+</div>
+
+<div class="slide">
+
+<h1>first time configuration</h1>
+<ul class="incremental">
+<li><p>git config --global user.name &quot;Andreas Kundig&quot;</p></li>
+<li><p>git config --global user.email andreas@kundig.com</p></li>
+<li><p>git config --global core.editor &quot;mate -w&quot;</p></li>
+<li><p>more configs -&gt; http://www.arthurkoziel.com/2008/05/02/git-configuration/</p></li>
+<li><p>git config --list</p></li>
+</ul>
+</div>
+
+<div class="slide">
+
+<h1>my first repo</h1>
+<ul class="incremental">
+<li><p>git init</p></li>
+<li><p>git add myFile</p></li>
+<li><p>git commit</p></li>
+<li><p>git commit -m &quot;commit message: i can haz cheeseburger&quot;</p></li>
+</ul>
+</div>
+
+<div class="slide">
+
+<h1>file status</h1>
+<ul class="incremental">
+<li><p>files can be tracked (files that were in the last snapshot) or untracked</p></li>
+<li><p>tracked files can be unmodified, modified or staged</p></li>
+<li><div class="figure">
+<img src="images/fileLifecycle.png" /><p class="caption"></p>
+</div></li>
+<li><p>git status</p></li>
+<li><div class="figure">
+<img src="images/localOperations.png" /><p class="caption"></p>
+</div></li>
+</ul>
+</div>
+
+<div class="slide">
+
+<h1>don't ignore me</h1>
+<ul class="incremental">
+<li>.gitignore</li>
+</ul>
+<pre><code># a comment - this is ignored
+*.a       # no .a files
+!lib.a    # but do track lib.a, even though you're ignoring .a files above
+/TODO     # only ignore the root TODO file, not subdir/TODO
+build/    # ignore all files in the build/ directory
+doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt
+</code></pre>
+</div>
+
+<div class="slide">
+
+<h1>skip the staging area</h1>
+<ul class="incremental">
+<li>git commit -am &quot;commit all changes on tracked files but not any new files&quot;</li>
+</ul>
+</div>
+
+<div class="slide">
+
+<h1>mv - rm</h1>
+<ul class="incremental">
+<li><p>git mv oldFilename newFilename</p></li>
+<li><p>git rm file # removes from repo and working directory</p></li>
+<li><p>git rm --cached file # only removes from repo (file no longer tracked but on working dir)</p></li>
+</ul>
+</div>
+</body>
+</html>

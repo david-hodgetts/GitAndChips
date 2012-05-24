@@ -1,0 +1,109 @@
+
+# Git & Chips
+### git initiation 
+### 30.05.12 
+### Andreas Kundig + David Hodgetts
+### made possible by Pro Git book 
+### creative commons
+
+# what is git
+
+* distributed version control
+
+* ![](images/distributed.png)
+
+
+# some defining features
+
+* stores snaphots
+
+* ![](images/snapshots.png)
+
+* not diffs
+
+* ![](images/snapshotsDiff.png)
+
+* local operations possible
+
+* git integrity (sha1)
+
+* you only ever really add data
+
+# local operations
+
+* ![](images/localOperations.png)
+
+
+# installation
+
+* linux -> apt-get install git-core
+
+* mac -> http://code.google.com/p/git-osx-installer
+
+* mac -> homebrew -> http://mxcl.github.com/homebrew/
+
+* windows -> http://code.google.com/p/msysgit
+
+* windows -> http://cygwin.com
+
+
+# first time configuration
+
+* git config --global user.name "Andreas Kundig"
+
+* git config --global user.email andreas@kundig.com
+
+* git config --global core.editor "mate -w"
+
+* more configs -> http://www.arthurkoziel.com/2008/05/02/git-configuration/
+
+* git config --list
+
+
+
+# my first repo
+
+* git init
+
+* git add myFile
+
+* git commit
+
+* git commit -m "commit message: i can haz cheeseburger"
+
+# file status
+
+* files can be tracked (files that were in the last snapshot) or untracked
+
+* tracked files can be unmodified, modified or staged
+
+* ![](images/fileLifecycle.png)
+
+* git status
+
+* ![](images/localOperations.png)
+
+# don't ignore me
+
+* .gitignore
+
+~~~~~~~~~~
+# a comment - this is ignored
+*.a       # no .a files
+!lib.a    # but do track lib.a, even though you're ignoring .a files above
+/TODO     # only ignore the root TODO file, not subdir/TODO
+build/    # ignore all files in the build/ directory
+doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt
+~~~~~~~~~~
+
+# skip the staging area
+
+* git commit -am "commit all changes on tracked files but not any new files"
+
+# mv - rm
+
+* git mv oldFilename newFilename
+
+* git rm file   # removes from repo and working directory
+
+* git rm --cached file  # only removes from repo (file no longer tracked but on working dir)
