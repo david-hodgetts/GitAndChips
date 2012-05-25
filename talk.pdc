@@ -71,6 +71,19 @@
 
 * git commit -m "commit message: i can haz cheeseburger"
 
+
+# cloning an existing repo
+
+* git clone [url]  
+
+* git clone git://github.com/user/repo.git
+
+* git clone https://github.com/user/repo.git
+
+* git clone user@someserver.com:git/myrepo.git
+
+
+
 # file status
 
 * files can be tracked (files that were in the last snapshot) or untracked
@@ -85,7 +98,7 @@
 
 # don't ignore me
 
-* .gitignore
+.gitignore
 
 ~~~~~~~~~~
 # a comment - this is ignored
@@ -107,3 +120,28 @@ doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt
 * git rm file   # removes from repo and working directory
 
 * git rm --cached file  # only removes from repo (file no longer tracked but on working dir)
+
+
+# viewing the commit history
+
+* git log
+
+* git log -p -2
+
+* git log --stat
+
+* git log --pretty=oneline
+
+* git log --pretty=format:"%h %s" --graph
+
+
+# undoing stuff
+
+* git commit --amend
+
+* unstaging staged file -> check out git status -> git reset HEAD fileName
+
+* unmodifying a modified file (not staged) -> look at git status -> git checkout -- fileName
+
+
+# working with remotes
