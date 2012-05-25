@@ -1,0 +1,39 @@
+garder l'histoire, eviter d'avoir des versions qui se baladent
+
+première version, add commit status
+ motivation de add: grouper les changements par theme
+deuxieme version diff
+troisieme version rm mv avec ou sans git 
+
+chef demande une modification et change d'avis
+jeter les modifications non commitées
+git checkout file (pour tous les fichiers ??)
+
+chef demande une version de test, et voudrait pouvoir comparer les deux
+branch 
+merge fast forward
+
+hot fix: une version en prod, une en développement (couleur)
+bug a corriger sur la prod (faute d'orthographe)
+
+reprendre la correction dans la branche pas de conflit
+
+correction du texte en hotfix et sur la branche: conflit
+
+le chef du chef decide de revenir très loin en arrière
+checkout alskj1k23jhk, branch 
+
+remote push pull: travailler sur plusieurs ordinateurs
+                  même chose avec des branches 
+
+developpeur 2: clone, 
+regarde comment le premier avance
+push sur un autre remote, 
+nouvelle branche hotfix
+
+developpeur 1 
+regarde le progrès du hotfix
+récupère branche hotfix du repo 2: pull fetch
+quand le hotfix est prêt: merge dans le master
+
+
