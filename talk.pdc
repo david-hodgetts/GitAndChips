@@ -134,6 +134,7 @@ doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt
 
 * git log --pretty=format:"%h %s" --graph
 
+* git log --graph --decorate --oneline
 
 # undoing stuff
 
@@ -144,4 +145,133 @@ doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt
 * unmodifying a modified file (not staged) -> look at git status -> git checkout -- fileName
 
 
+# Git Branching
+
+* single commit
+
+* ![](images/singleCommitTree.png)
+
+* we add some commits
+
+* ![](images/multipleCommits.png)
+
+# so a branch is ...
+
+* a movable pointer to one of these commits
+
+* default branch is called "master"
+
+* ![](images/branchPointer.png)
+
+# creating a new branch means ...
+
+* adding a new movable pointer
+
+* git branch testing
+
+* ![](images/newBranch.png)
+
+# ok but how does Git know on which branch i am?
+
+* it uses a special pointer called HEAD
+
+* ![](images/headOnMaster.png)
+
+* if we change branches: git checkout testing 
+
+* ![](images/headOnTesting.png)
+
+# HEAD moves with the new commits on current branch
+
+* modify file on testing + commit on testing
+
+* ![](images/headMovedOnTesting.png)
+
+* git checkout master
+
+* ![](images/headBackOnMaster.png)
+
+# alternate history
+
+* let's do some work on master and commit
+
+* ![](images/headMovedOnMaster.png)
+
+* mmm but how do i reconcile my diverging branches? ...
+
+# merging
+
+* a new project on my supersite for my superstartup
+
+* ![](images/supersiteStart.png)
+
+* let's work on issue 53
+
+* git checkout -b iss53  (same as "git branch iss53" followed by "git checkout iss53")
+
+* ![](images/createdIss53.png)
+
+* do some work and commit
+
+* ![](images/commitOnIss53.png)
+
+# oh boy there is an urgent fix required on the production version (master)
+
+* commit your work on iss53
+
+* checkout master
+
+* create a hotfix branch on master -> git checkout -b hotfix
+
+* do the fix and commit
+
+* ![](images/hotfixBranch.png)
+
+# if hotfix is approved we can merge it back into master
+
+* git checkout master
+
+* git merge hotfix
+
+* ![](images/fastForward.png)
+
+* master is "fast forwarded" (the pointer has just to move point to the same commit as hotfix)
+
+* hotfix branch no longer needed -> git branch -d hotfix
+
+# get back to work on issue 53
+
+* git checkout iss53
+
+* do work and commit
+
+* ![](images/moreWorkOnIss53.png)
+
+# we assume work is done on issue 53 we want to merge work back into master
+
+* git checkout master
+
+* git merge iss53
+
+* Fast forward not possible
+
+# git does a 3 way merge
+
+* (master, iss53 and first common ancestor)
+
+* ![](images/3wayMerge.png)
+
+* result:
+
+* ![](images/3wayMergeResult.png)
+
+
+
+
+
+
+ 
+
+
 # working with remotes
+
