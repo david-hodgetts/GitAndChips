@@ -342,7 +342,96 @@ doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt
 
 <div class="slide">
 
-<h1>working with remotes</h1>
+<h1>merge conflicts</h1>
+<ul class="incremental">
+<li><img src="images/3wayMerge.png" /></li>
+</ul>
+</div>
+
+<div class="slide">
+
+<h1>branch management</h1>
+<ul class="incremental">
+<li><p>git branch</p></li>
+<li><p>git branch -a</p></li>
+<li><p>git branch -r</p></li>
+<li><p>git branch --merged (shows branches that are already merged on current branch)</p></li>
+<li><p>delete branch: git branch -d</p></li>
+</ul>
+</div>
+
+<div class="slide">
+
+<h1>remotes and remote branches</h1>
+<ul class="incremental">
+<li><p>git clone supersite</p></li>
+<li><div class="figure">
+<img src="images/gitClone.png" /><p class="caption"></p>
+</div></li>
+<li><p>Remote branches act as bookmarks to remind you where the branches on your remote repositories were the last time you connected to them.</p></li>
+<li><p>remote/branch</p></li>
+<li><p>origin/master</p></li>
+<li><p>pierre/development</p></li>
+</ul>
+</div>
+
+<div class="slide">
+
+<h1>remote management</h1>
+<ul class="incremental">
+<li><p>git remote</p></li>
+<li><p>git remote show origin</p></li>
+<li><p>git remote add repoOfAndreas git://github.com/repoOfAndreas.git</p></li>
+<li><p>git remote show repoOfAndreas</p></li>
+<li><p>git remote rename oldName newName</p></li>
+<li><p>git remote rm repoOfAndreas (removes remote named repoOfAndreas)</p></li>
+</ul>
+</div>
+
+<div class="slide">
+
+<h1>how does it work?</h1>
+<ul class="incremental">
+<li><p>someone works on the projet and pushes to origin</p></li>
+<li><div class="figure">
+<img src="images/pushOnOrigin.png" /><p class="caption"></p>
+</div></li>
+<li><p>histories diverge, again...</p></li>
+</ul>
+</div>
+
+<div class="slide">
+
+<h1>sync with remote</h1>
+<ul class="incremental">
+<li><p>git fetch origin</p></li>
+<li><div class="figure">
+<img src="images/gitFetch.png" /><p class="caption"></p>
+</div></li>
+<li><p>git log origin/master</p></li>
+<li><p>git diff master origin/master</p></li>
+<li><p>git merge origin/master</p></li>
+</ul>
+</div>
+
+<div class="slide">
+
+<h1>you can also use Pull instead of Fetch</h1>
+<ul class="incremental">
+<li><p>pull does :</p></li>
+<li><p>git fetch + git merge into current branch</p></li>
+<li><p>but it's a not really the git way</p></li>
+</ul>
+</div>
+
+<div class="slide">
+
+<h1>Push your work</h1>
+<ul class="incremental">
+<li><p>git push</p></li>
+<li><p>git push remoteName branchName</p></li>
+<li><p>git push origin master</p></li>
+</ul>
 </div>
 </body>
 </html>

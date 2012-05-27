@@ -265,13 +265,84 @@ doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt
 
 * ![](images/3wayMergeResult.png)
 
+# merge conflicts
 
+* ![](images/3wayMerge.png)
 
+# branch management
 
+* git branch
 
+* git branch -a
 
- 
+* git branch -r
 
+* git branch --merged (shows branches that are already merged on current branch)
 
-# working with remotes
+* delete branch: git branch -d
+
+# remotes and remote branches
+
+* git clone supersite
+
+* ![](images/gitClone.png)
+
+* Remote branches act as bookmarks to remind you where the branches on your remote repositories were the last time you connected to them.
+
+* remote/branch
+
+* origin/master
+
+* pierre/development
+
+# remote management
+
+* git remote 
+
+* git remote show origin
+
+* git remote add repoOfAndreas git://github.com/repoOfAndreas.git
+
+* git remote show repoOfAndreas
+
+* git remote rename oldName newName
+
+* git remote rm repoOfAndreas    (removes remote named repoOfAndreas)
+
+# how does it work?
+
+* someone works on the projet and pushes to origin
+
+* ![](images/pushOnOrigin.png)
+
+* histories diverge, again... 
+
+# sync with remote
+
+* git fetch origin
+
+* ![](images/gitFetch.png)
+
+* git log origin/master
+
+* git diff master origin/master
+
+* git merge origin/master     
+
+# you can also use Pull instead of Fetch
+
+* pull does :
+
+* git fetch  +  git merge into current branch
+
+* but it's a not really the git way
+
+# Push your work
+
+* git push
+
+* git push remoteName branchName
+
+* git push origin master
+
 
