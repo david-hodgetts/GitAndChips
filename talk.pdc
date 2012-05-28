@@ -65,6 +65,8 @@
 
 * git init
 
+* git status
+
 * git add myFile
 
 * git commit
