@@ -257,6 +257,8 @@ doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt
 
 * Fast forward not possible
 
+* ![](images/moreWorkOnIss53.png)
+
 # git does a 3 way merge
 
 * (master, iss53 and first common ancestor)
@@ -347,4 +349,9 @@ doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt
 
 * git push origin master
 
+# what's next
+
+* http://git-scm.com/documentation/external-links
+
+* stackoverflow
 

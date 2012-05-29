@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"> 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
-  <title></title>
-  <link rel="stylesheet" type="text/css" media="screen, projection, print"
-    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
-  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js.gz"
+  <link rel="stylesheet" type="text/css" media="screen, projection, print" 
+    href="http://www.w3.org/Talks/Tools/Slidy/slidy.css" /> 
+  <script src="http://www.w3.org/Talks/Tools/Slidy/slidy.js.gz"
     charset="utf-8" type="text/javascript"></script>
 </head>
 <body>
-<div class="section slide level1" id="git-chips">
+<div class="slide">
+
 <h1>Git &amp; Chips</h1>
-<h3 id="git-initiation">git initiation</h3>
-<h3 id="section">30.05.12</h3>
-<h3 id="andreas-kundig-david-hodgetts">Andreas Kundig + David Hodgetts</h3>
-<h3 id="made-possible-by-pro-git-book">made possible by Pro Git book</h3>
-<h3 id="creative-commons">creative commons</h3>
+<h3>git initiation</h3>
+<h3>30.05.12</h3>
+<h3>Andreas Kundig + David Hodgetts</h3>
+<h3>made possible by Pro Git book</h3>
+<h3>creative commons</h3>
 </div>
-<div class="section slide level1" id="what-is-git">
+
+<div class="slide">
+
 <h1>what is git</h1>
 <ul class="incremental">
 <li><p>distributed version control</p></li>
@@ -30,7 +31,9 @@
 </div></li>
 </ul>
 </div>
-<div class="section slide level1" id="some-defining-features">
+
+<div class="slide">
+
 <h1>some defining features</h1>
 <ul class="incremental">
 <li><p>stores snaphots</p></li>
@@ -46,13 +49,17 @@
 <li><p>you only ever really add data</p></li>
 </ul>
 </div>
-<div class="section slide level1" id="local-operations">
+
+<div class="slide">
+
 <h1>local operations</h1>
 <ul class="incremental">
 <li><img src="images/localOperations.png" /></li>
 </ul>
 </div>
-<div class="section slide level1" id="installation">
+
+<div class="slide">
+
 <h1>installation</h1>
 <ul class="incremental">
 <li><p>linux -&gt; apt-get install git-core</p></li>
@@ -62,7 +69,9 @@
 <li><p>windows -&gt; http://cygwin.com</p></li>
 </ul>
 </div>
-<div class="section slide level1" id="first-time-configuration">
+
+<div class="slide">
+
 <h1>first time configuration</h1>
 <ul class="incremental">
 <li><p>git config --global user.name &quot;Andreas Kundig&quot;</p></li>
@@ -72,7 +81,9 @@
 <li><p>git config --list</p></li>
 </ul>
 </div>
-<div class="section slide level1" id="my-first-repo">
+
+<div class="slide">
+
 <h1>my first repo</h1>
 <ul class="incremental">
 <li><p>git init</p></li>
@@ -82,7 +93,9 @@
 <li><p>git commit -m &quot;commit message: i can haz cheeseburger&quot;</p></li>
 </ul>
 </div>
-<div class="section slide level1" id="cloning-an-existing-repo">
+
+<div class="slide">
+
 <h1>cloning an existing repo</h1>
 <ul class="incremental">
 <li><p>git clone [url]</p></li>
@@ -91,7 +104,9 @@
 <li><p>git clone user@someserver.com:git/myrepo.git</p></li>
 </ul>
 </div>
-<div class="section slide level1" id="file-status">
+
+<div class="slide">
+
 <h1>file status</h1>
 <ul class="incremental">
 <li><p>files can be tracked (files that were in the last snapshot) or untracked</p></li>
@@ -105,23 +120,30 @@
 </div></li>
 </ul>
 </div>
-<div class="section slide level1" id="dont-ignore-me">
+
+<div class="slide">
+
 <h1>don't ignore me</h1>
 <p>.gitignore</p>
 <pre><code># a comment - this is ignored
 *.a       # no .a files
-!lib.a    # but do track lib.a, even though you&#39;re ignoring .a files above
+!lib.a    # but do track lib.a, even though you're ignoring .a files above
 /TODO     # only ignore the root TODO file, not subdir/TODO
 build/    # ignore all files in the build/ directory
-doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt</code></pre>
+doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt
+</code></pre>
 </div>
-<div class="section slide level1" id="skip-the-staging-area">
+
+<div class="slide">
+
 <h1>skip the staging area</h1>
 <ul class="incremental">
 <li>git commit -am &quot;commit all changes on tracked files but not any new files&quot;</li>
 </ul>
 </div>
-<div class="section slide level1" id="mv---rm">
+
+<div class="slide">
+
 <h1>mv - rm</h1>
 <ul class="incremental">
 <li><p>git mv oldFilename newFilename</p></li>
@@ -129,7 +151,9 @@ doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt</code></pre>
 <li><p>git rm --cached file # only removes from repo (file no longer tracked but on working dir)</p></li>
 </ul>
 </div>
-<div class="section slide level1" id="viewing-the-commit-history">
+
+<div class="slide">
+
 <h1>viewing the commit history</h1>
 <ul class="incremental">
 <li><p>git log</p></li>
@@ -140,7 +164,9 @@ doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt</code></pre>
 <li><p>git log --graph --decorate --oneline</p></li>
 </ul>
 </div>
-<div class="section slide level1" id="undoing-stuff">
+
+<div class="slide">
+
 <h1>undoing stuff</h1>
 <ul class="incremental">
 <li><p>git commit --amend</p></li>
@@ -148,7 +174,9 @@ doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt</code></pre>
 <li><p>unmodifying a modified file (not staged) -&gt; look at git status -&gt; git checkout -- fileName</p></li>
 </ul>
 </div>
-<div class="section slide level1" id="git-branching">
+
+<div class="slide">
+
 <h1>Git Branching</h1>
 <ul class="incremental">
 <li><p>single commit</p></li>
@@ -161,7 +189,9 @@ doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt</code></pre>
 </div></li>
 </ul>
 </div>
-<div class="section slide level1" id="so-a-branch-is-...">
+
+<div class="slide">
+
 <h1>so a branch is ...</h1>
 <ul class="incremental">
 <li><p>a movable pointer to one of these commits</p></li>
@@ -171,7 +201,9 @@ doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt</code></pre>
 </div></li>
 </ul>
 </div>
-<div class="section slide level1" id="creating-a-new-branch-means-...">
+
+<div class="slide">
+
 <h1>creating a new branch means ...</h1>
 <ul class="incremental">
 <li><p>adding a new movable pointer</p></li>
@@ -181,7 +213,9 @@ doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt</code></pre>
 </div></li>
 </ul>
 </div>
-<div class="section slide level1" id="ok-but-how-does-git-know-on-which-branch-i-am">
+
+<div class="slide">
+
 <h1>ok but how does Git know on which branch i am?</h1>
 <ul class="incremental">
 <li><p>it uses a special pointer called HEAD</p></li>
@@ -194,7 +228,9 @@ doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt</code></pre>
 </div></li>
 </ul>
 </div>
-<div class="section slide level1" id="head-moves-with-the-new-commits-on-current-branch">
+
+<div class="slide">
+
 <h1>HEAD moves with the new commits on current branch</h1>
 <ul class="incremental">
 <li><p>modify file on testing + commit on testing</p></li>
@@ -207,7 +243,9 @@ doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt</code></pre>
 </div></li>
 </ul>
 </div>
-<div class="section slide level1" id="alternate-history">
+
+<div class="slide">
+
 <h1>alternate history</h1>
 <ul class="incremental">
 <li><p>let's do some work on master and commit</p></li>
@@ -217,7 +255,9 @@ doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt</code></pre>
 <li><p>mmm but how do i reconcile my diverging branches? ...</p></li>
 </ul>
 </div>
-<div class="section slide level1" id="merging">
+
+<div class="slide">
+
 <h1>merging</h1>
 <ul class="incremental">
 <li><p>a new project on my supersite for my superstartup</p></li>
@@ -235,7 +275,9 @@ doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt</code></pre>
 </div></li>
 </ul>
 </div>
-<div class="section slide level1" id="oh-boy-there-is-an-urgent-fix-required-on-the-production-version-master">
+
+<div class="slide">
+
 <h1>oh boy there is an urgent fix required on the production version (master)</h1>
 <ul class="incremental">
 <li><p>commit your work on iss53</p></li>
@@ -247,7 +289,9 @@ doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt</code></pre>
 </div></li>
 </ul>
 </div>
-<div class="section slide level1" id="if-hotfix-is-approved-we-can-merge-it-back-into-master">
+
+<div class="slide">
+
 <h1>if hotfix is approved we can merge it back into master</h1>
 <ul class="incremental">
 <li><p>git checkout master</p></li>
@@ -259,7 +303,9 @@ doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt</code></pre>
 <li><p>hotfix branch no longer needed -&gt; git branch -d hotfix</p></li>
 </ul>
 </div>
-<div class="section slide level1" id="get-back-to-work-on-issue-53">
+
+<div class="slide">
+
 <h1>get back to work on issue 53</h1>
 <ul class="incremental">
 <li><p>git checkout iss53</p></li>
@@ -269,15 +315,22 @@ doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt</code></pre>
 </div></li>
 </ul>
 </div>
-<div class="section slide level1" id="we-assume-work-is-done-on-issue-53-we-want-to-merge-work-back-into-master">
+
+<div class="slide">
+
 <h1>we assume work is done on issue 53 we want to merge work back into master</h1>
 <ul class="incremental">
 <li><p>git checkout master</p></li>
 <li><p>git merge iss53</p></li>
 <li><p>Fast forward not possible</p></li>
+<li><div class="figure">
+<img src="images/moreWorkOnIss53.png" /><p class="caption"></p>
+</div></li>
 </ul>
 </div>
-<div class="section slide level1" id="git-does-a-3-way-merge">
+
+<div class="slide">
+
 <h1>git does a 3 way merge</h1>
 <ul class="incremental">
 <li><p>(master, iss53 and first common ancestor)</p></li>
@@ -290,13 +343,17 @@ doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt</code></pre>
 </div></li>
 </ul>
 </div>
-<div class="section slide level1" id="merge-conflicts">
+
+<div class="slide">
+
 <h1>merge conflicts</h1>
 <ul class="incremental">
 <li><img src="images/3wayMerge.png" /></li>
 </ul>
 </div>
-<div class="section slide level1" id="branch-management">
+
+<div class="slide">
+
 <h1>branch management</h1>
 <ul class="incremental">
 <li><p>git branch</p></li>
@@ -306,7 +363,9 @@ doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt</code></pre>
 <li><p>delete branch: git branch -d</p></li>
 </ul>
 </div>
-<div class="section slide level1" id="remotes-and-remote-branches">
+
+<div class="slide">
+
 <h1>remotes and remote branches</h1>
 <ul class="incremental">
 <li><p>git clone supersite</p></li>
@@ -319,7 +378,9 @@ doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt</code></pre>
 <li><p>pierre/development</p></li>
 </ul>
 </div>
-<div class="section slide level1" id="remote-management">
+
+<div class="slide">
+
 <h1>remote management</h1>
 <ul class="incremental">
 <li><p>git remote</p></li>
@@ -330,7 +391,9 @@ doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt</code></pre>
 <li><p>git remote rm repoOfAndreas (removes remote named repoOfAndreas)</p></li>
 </ul>
 </div>
-<div class="section slide level1" id="how-does-it-work">
+
+<div class="slide">
+
 <h1>how does it work?</h1>
 <ul class="incremental">
 <li><p>someone works on the projet and pushes to origin</p></li>
@@ -340,7 +403,9 @@ doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt</code></pre>
 <li><p>histories diverge, again...</p></li>
 </ul>
 </div>
-<div class="section slide level1" id="sync-with-remote">
+
+<div class="slide">
+
 <h1>sync with remote</h1>
 <ul class="incremental">
 <li><p>git fetch origin</p></li>
@@ -352,7 +417,9 @@ doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt</code></pre>
 <li><p>git merge origin/master</p></li>
 </ul>
 </div>
-<div class="section slide level1" id="you-can-also-use-pull-instead-of-fetch">
+
+<div class="slide">
+
 <h1>you can also use Pull instead of Fetch</h1>
 <ul class="incremental">
 <li><p>pull does :</p></li>
@@ -360,12 +427,23 @@ doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt</code></pre>
 <li><p>but it's a not really the git way</p></li>
 </ul>
 </div>
-<div class="section slide level1" id="push-your-work">
+
+<div class="slide">
+
 <h1>Push your work</h1>
 <ul class="incremental">
 <li><p>git push</p></li>
 <li><p>git push remoteName branchName</p></li>
 <li><p>git push origin master</p></li>
+</ul>
+</div>
+
+<div class="slide">
+
+<h1>what's next</h1>
+<ul class="incremental">
+<li><p>http://git-scm.com/documentation/external-links</p></li>
+<li><p>stackoverflow</p></li>
 </ul>
 </div>
 </body>
